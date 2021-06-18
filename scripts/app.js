@@ -720,7 +720,7 @@ const UIController = (() => {
             <td>15%</td>
             <td>${saleC1}</td>
             <td>-</td>
-            <td rowspan="10">${sumC + sumA}</td>
+            <td rowspan="10" class="font-weight-bold text-success">${sumC + sumA}</td>
         </tr>
         <tr>
             <th scope="row">1 Quý trước đó gần nhất (C)</th>
@@ -1341,7 +1341,7 @@ const AppController = ((stockCtrl, UICtrl) => {
             alert('Mã công ty không hợp lệ');
             return;
         }
-        alert("Vui lòng chờ...")
+        alert("Vui lòng chờ... Nhân OK để bắt đầu")
         const fullData = await stockCtrl.getData4m(companyCode);
         if (!fullData) {
             alert("Lỗi");
