@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Dữ liệu cổ phiếu</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+        <a class="navbar-brand" href="">Dữ liệu cổ phiếu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form id="form__company__code" class="form-inline col-md-10">
+            <input id="input__company__code" class="form-control mr-sm-2" type="search" placeholder="Search"
+                aria-label="Search" required>
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+        </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#info" class="nav-link active" role="tab" data-toggle="tab">Thông tin</a>
+            </li>
+            <li class="nav-item">
+                <a href="#4M" class="nav-link" role="tab" data-toggle="tab">4M</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#canslim" class="nav-link" role="tab" data-toggle="tab">Canslim</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- TAB COMPANY INFO -->
+            <div role="tabpanel" class="tab-pane fade active" id="info">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-1" scope="col">Thông tin</th>
+                            <th scope="col">Mô tả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- Symbol -->
+                            <th scope="col">Mã chứng khoáng</th>
+                            <td id="symbol"></td>
+                        </tr>
+                        <tr>
+                            <!-- CompanyName -->
+                            <th scope="col">Tên công ty</th>
+                            <td id="company__name"></td>
+                        </tr>
+                        <tr>
+                            <!-- Email -->
+                            <th scope="col">Email</th>
+                            <td id="email"></td>
+                        </tr>
+                        <tr>
+                            <!-- Exchange -->
+                            <th scope="col">Sàn giao dịch</th>
+                            <td id="exchange"></td>
+                        </tr>
+                        <tr>
+                            <!-- Fax -->
+                            <th scope="col">Số Fax</th>
+                            <td id="fax">
+                        </tr>
+                        </tr>
+                        <tr>
+                            <!-- Phone -->
+                            <th scope="col">Số điện thoại</th>
+                            <td id="phone">
+                        </tr>
+                        </tr>
+                        <tr>
+                            <!-- Overview -->
+                            <th scope="col">Tổng quan</th>
+                            <td id="overview">
+                        </tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TAB 4M -->
+            <div role="tabpanel" class="tab-pane fade" id="4M">
+                <table id="table__4m" class="table table-hover table-striped table-bordered table-index">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Chỉ Số</th>
+                            <th scope="col" class="text-center">2015</th>
+                            <th scope="col" class="text-center">2016</th>
+                            <th scope="col" class="text-center">2017</th>
+                            <th scope="col" class="text-center">2018</th>
+                            <th scope="col" class="text-center">2019</th>
+                            <th scope="col" class="text-center">2020</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody__4m">
+                        <!-- <tr>
+                            <th scope="row">Sales (đồng)</th>
+                            %td_sales%
+                        </tr>
+                        <tr>
+                            <th scope="row">EPS (đồng)</th>
+                            %td_eps%
+                        </tr>
+                        <tr>
+                            <th scope="row">BVPS (đồng)</th>
+                            %td_bvps%
+                        </tr>
+                        <tr>
+                            <th scope="row">Lưu chuyển tiền thuần (đồng)</th>
+                            %td_moneyFollow%
+                        </tr>
+                        <tr>
+                            <th scope="row">Nợ dài hạn năm gần nhất (đồng)</th>
+                            <td>%td_lastLongTermDebt%</td>
+                            <td class="font-weight-bold text-center" colspan="4">Lợi nhuận năm gần nhất (đồng)</td>
+                            <td>%td_lastProfit%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Effectiveness</th>
+                            %td_effectiveness%
+                        </tr>
+                        <tr>
+                            <th scope="row">Effciency</th>
+                            %td_efficiency%
+                        </tr>
+                        <tr>
+                            <th scope="row">Productivity</th>
+                            %td_productivity%
+                        </tr>
+                        <tr>
+                            <th scope="row">ROA</th>
+                            %td_roa%
+                        </tr>
+                        <tr>
+                            <th scope="row">ROE</th>
+                            %td_roe%
+                        </tr>
+                        <tr>
+                            <th scope="row">ROIC</th>
+                            %td_roic%
+                        </tr> -->
+                    </tbody>
+                </table>
+
+                <table id="table__4m_2" class="table table-hover table-striped table-bordered table-index">
+                    <thead>
+                        <tr>
+                            <th scope="col" rowspan="2" class="text-center">Chỉ Số</th>
+                            <th scope="col" class="text-center">1</th>
+                            <th scope="col" class="text-center">3</th>
+                            <th scope="col" class="text-center">5</th>
+                            <th scope="col" rowspan="2" class="text-center">Tham chiếu</th>
+                            <th scope="col" rowspan="2" class="text-center">Tỉ trọng</th>
+                            <th scope="col" rowspan="2" class="text-center">Điểm Thành Phần</th>
+                            <th scope="col" rowspan="2" class="text-center">Tổng điểm</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="text-center">30%</th>
+                            <th scope="col" class="text-center">30%</th>
+                            <th scope="col" class="text-center">40%</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody__4m_2">
+                        <!-- <tr>
+                            <th scope="row">Sales Growth Rate</th>
+                            %td_sales_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td rowspan="11">-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">EPS Growth Rate</th>
+                            %td_eps_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">BVPS Growth Rate</th>
+                            %td_bvps_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tăng trưởng OPC LCDTKD</th>
+                            %td_moneyFollow_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nợ dài hạn năm gần nhất (đồng)</th>
+                            <td>%td_lastLongTermDebt%</td>
+                            <td class="font-weight-bold text-center">Lợi nhuận năm gần nhất (đồng)</td>
+                            <td>%td_lastProfit%</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Effectiveness Growth Rate</th>
+                            %td_effectiveness_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Effciency Growth Rate</th>
+                            %td_efficiency_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Productivity Growth Rate</th>
+                            %td_productivity_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ROA Growth Rate</th>
+                            %td_roa_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ROE Growth Rate</th>
+                            %td_roe_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ROIC Growth Rate</th>
+                            %td_roic_growth_rate%
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TAB CANSLIM -->
+            <div role="tabpanel" class="tab-pane fade" id="canslim">
+                <table id="table__canslim" class="table table-hover table-striped table-bordered table-index">
+                    <tbody id="tbody__canslim">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/swal2.js"></script>
+    <script src="bootstrap/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</body>
+
+</html>
