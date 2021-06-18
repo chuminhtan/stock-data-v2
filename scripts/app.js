@@ -1341,11 +1341,16 @@ const AppController = ((stockCtrl, UICtrl) => {
             alert('Mã công ty không hợp lệ');
             return;
         }
+        alert("Vui lòng chờ...")
         const fullData = await stockCtrl.getData4m(companyCode);
+        if (!fullData) {
+            alert("Lỗi");
+        }
         UICtrl.renderInfo(fullData)
         UICtrl.renderTable4m(fullData)
         UICtrl.render4mRate(fullData);
         UICtrl.renderCanslimTable(fullData);
+        alert("Hoàn Thành")
     }
 
     return {
