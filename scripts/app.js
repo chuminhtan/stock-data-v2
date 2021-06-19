@@ -705,6 +705,24 @@ const UIController = (() => {
             <th scope="col" class="text-center">Tổng</th>
         </tr>
         <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>${sumC}</td>
+        <td>${sumA}</td>
+        <td rowspan="11" class="font-weight-bold text-success">${sumC + sumA}</td>
+    </tr>
+        <tr>
             <th scope="row">1 Quý gần nhất (C)</th>
             <td></td>
             <td></td>
@@ -720,7 +738,6 @@ const UIController = (() => {
             <td>15%</td>
             <td>${saleC1}</td>
             <td>-</td>
-            <td rowspan="10" class="font-weight-bold text-success">${sumC + sumA}</td>
         </tr>
         <tr>
             <th scope="row">1 Quý trước đó gần nhất (C)</th>
@@ -831,23 +848,6 @@ const UIController = (() => {
             <td>-</td>
             <td>${epsA2}</td>
         </tr>
-        <tr>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>${sumC}</td>
-        <td>${sumA}</td>
-    </tr>
         `
 
             let sale_q2_2019_q1_2021 = this.createData(1, 8, salesQuarter);
