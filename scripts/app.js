@@ -656,11 +656,11 @@ const UIController = (() => {
             let sumEps4Left = 0;
             let sumEps4Right = 0;
             for (let i = 0; i <= 3; i++) {
-                sumEps4Left += salesQuarter[i].value;
+                sumEps4Left += epsQuarter[i].value;
             }
 
             for (let i = 4; i <= 7; i++) {
-                sumEps4Right += salesQuarter[i].value;
+                sumEps4Right += epsQuarter[i].value;
             }
 
             eps4 = (sumEps4Right / sumEps4Left) - 1;
@@ -714,7 +714,7 @@ const UIController = (() => {
             <td></td>
             <td></td>
             <td></td>
-            <td>${salesQuarter[4].value}</td>
+            <td>${salesQuarter[8].value}</td>
             <td>${sale1}</td>
             <td>25%</td>
             <td>15%</td>
