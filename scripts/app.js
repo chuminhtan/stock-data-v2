@@ -568,7 +568,11 @@ const UIController = (() => {
         row1: 15,
         row2: 10,
         row3: 10,
-        row4: 5
+        row4: 5,
+        row5: 20,
+        row6: 15,
+        row7: 15,
+        row8: 10
     }
 
     // Chỉ số
@@ -666,23 +670,21 @@ const UIController = (() => {
             eps4 = (sumEps4Right / sumEps4Left) - 1;
             eps4 = parseFloat((eps4 * 100).toFixed(2))
 
-            // SALE C1
-            epsC1 = this.calculateCanslimScore(eps1, RefRow.row1, ProRow.row1);
+            // EPS C1
+            epsC1 = this.calculateCanslimScore(eps1, RefRow.row1, ProRow.row5);
 
-            // SALE C2
-            epsC2 = this.calculateCanslimScore(eps2, RefRow.row2, ProRow.row2)
+            // EPS C2
+            epsC2 = this.calculateCanslimScore(eps2, RefRow.row2, ProRow.row6)
 
-            // SALE A1
-            epsA1 = this.calculateCanslimScore(eps3, RefRow.row3, ProRow.row3)
+            // EPS A1
+            epsA1 = this.calculateCanslimScore(eps3, RefRow.row3, ProRow.row7)
 
-            // SALE A2
-            epsA2 = this.calculateCanslimScore(eps4, RefRow.row4, ProRow.row4)
+            // EPS A2
+            epsA2 = this.calculateCanslimScore(eps4, RefRow.row4, ProRow.row8)
 
             // SUM C
             let sumC = parseFloat((saleC1 + saleC2 + epsC1 + epsC2).toFixed(2));
             let sumA = parseFloat((saleA1 + saleA2 + epsA1 + epsA2).toFixed(2));
-
-
 
 
             // CREATE TABLE
@@ -807,7 +809,7 @@ const UIController = (() => {
             <td>${epsQuarter[8].value}</td>
             <td>${eps1}</td>
             <td>25%</td>
-            <td>15%</td>
+            <td>20%</td>
             <td>${epsC1}</td>
             <td>-</td>
         </tr>
@@ -824,7 +826,7 @@ const UIController = (() => {
             <td></td>
             <td>${eps2}</td>
             <td>25%</td>
-            <td>10%</td>
+            <td>15%</td>
             <td>${epsC2}</td>
             <td>-</td>
         </tr>
@@ -834,7 +836,7 @@ const UIController = (() => {
             %eps_q2_2019_q1_2021%
             <td>${eps3}</td>
             <td>20%</td>
-            <td>10%</td>
+            <td>15%</td>
             <td>-</td>
             <td>${epsA1}</td>
         </tr>
@@ -844,7 +846,7 @@ const UIController = (() => {
             <td></td>
             <td>${eps4}</td>
             <td>20%</td>
-            <td>5%</td>
+            <td>10%</td>
             <td>-</td>
             <td>${epsA2}</td>
         </tr>
